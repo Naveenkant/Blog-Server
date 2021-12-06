@@ -56,6 +56,7 @@ router.route("/register").post((req, res) => {
     password: req.body.password,
     email: req.body.email,
   });
+ 
   user
     .save()
     .then(() => {
@@ -63,6 +64,8 @@ router.route("/register").post((req, res) => {
       res.status(200).json({ msg: "User Successfully Registered" });
     })
     .catch((err) => {
+
+      console.log(err);
       res.status(403).json({ msg: err });
     });
 });

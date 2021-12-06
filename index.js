@@ -4,7 +4,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://BlogUser:jAVhPqR9YORwjwXW@cluster0-fc8do.gcp.mongodb.net/BlogDB?retryWrites=true&w=majority",
+  "mongodb+srv://naveenkant:%23%401Naveen@cluster0.6ef2a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -28,11 +28,11 @@ const blogRoute = require("./routes/blogpost");
 app.use("/blogPost", blogRoute);
 
 data = {
-  msg: "Welcome on DevStack Blog App development YouTube video series",
+  msg: "Welcome on Naveen Blog App development YouTube video series",
   info: "This is a root endpoint",
   Working: "Documentations of other endpoints will be release soon :)",
   request:
-    "Hey if you did'nt subscribed my YouTube channle please subscribe it",
+    "complete this project as soon as possible ",
 };
 
 app.route("/").get((req, res) => res.json(data));
